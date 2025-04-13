@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            width: 50%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>C Language Quiz</h1>
+    <div class="timer">
+        <p>Time Remaining: <span id="timer">10:00</span></p>
+    </div>
+    
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What is the size of a float in C language?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) 4 bytes</li>
+                <li><input type="radio" name="q1" value="B"> B) 2 bytes</li>
+                <li><input type="radio" name="q1" value="C"> C) 8 bytes</li>
+                <li><input type="radio" name="q1" value="D"> D) 16 bytes</li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which function is used to read a string in C language?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) scanf()</li>
+                <li><input type="radio" name="q2" value="B"> B) gets()</li>
+                <li><input type="radio" name="q2" value="C"> C) fgets()</li>
+                <li><input type="radio" name="q2" value="D"> D) read()</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What is the correct syntax to declare a pointer in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) int ptr;</li>
+                <li><input type="radio" name="q3" value="B"> B) int* ptr;</li>
+                <li><input type="radio" name="q3" value="C"> C) ptr int*;</li>
+                <li><input type="radio" name="q3" value="D"> D) pointer int;</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. What does the `malloc()` function do in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) Allocates memory for a variable</li>
+                <li><input type="radio" name="q4" value="B"> B) Allocates a fixed-size memory block</li>
+                <li><input type="radio" name="q4" value="C"> C) Releases memory space</li>
+                <li><input type="radio" name="q4" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. How do you define a function in C language?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) function() { }</li>
+                <li><input type="radio" name="q5" value="B"> B) def function() { }</li>
+                <li><input type="radio" name="q5" value="C"> C) void function() { }</li>
+                <li><input type="radio" name="q5" value="D"> D) function void() { }</li>
+            </ul>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. Which of the following is the correct syntax for a C loop?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) for(i=0; i<5; i++)</li>
+                <li><input type="radio" name="q6" value="B"> B) for(i; 0; 5; i++)</li>
+                <li><input type="radio" name="q6" value="C"> C) while(i<5) {}</li>
+                <li><input type="radio" name="q6" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What is the use of the `#include` directive in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) To include functions from external files</li>
+                <li><input type="radio" name="q7" value="B"> B) To include header files</li>
+                <li><input type="radio" name="q7" value="C"> C) To include libraries</li>
+                <li><input type="radio" name="q7" value="D"> D) All of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. Which of these is the correct syntax for defining a constant in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) #define CONSTANT 100</li>
+                <li><input type="radio" name="q8" value="B"> B) const int CONSTANT = 100</li>
+                <li><input type="radio" name="q8" value="C"> C) constant = 100;</li>
+                <li><input type="radio" name="q8" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. What is the default return type of a function in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) void</li>
+                <li><input type="radio" name="q9" value="B"> B) int</li>
+                <li><input type="radio" name="q9" value="C"> C) char</li>
+                <li><input type="radio" name="q9" value="D"> D) float</li>
+            </ul>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. What is the purpose of `return` statement in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> A) To terminate the program</li>
+                <li><input type="radio" name="q10" value="B"> B) To return a value from the function</li>
+                <li><input type="radio" name="q10" value="C"> C) Both A and B</li>
+                <li><input type="radio" name="q10" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. How do you declare a variable in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="A"> A) int x;</li>
+                <li><input type="radio" name="q11" value="B"> B) variable x;</li>
+                <li><input type="radio" name="q11" value="C"> C) var x;</li>
+                <li><input type="radio" name="q11" value="D"> D) declare x;</li>
+            </ul>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. Which header file is needed to use the `printf()` function?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="A"> A) stdio.h</li>
+                <li><input type="radio" name="q12" value="B"> B) conio.h</li>
+                <li><input type="radio" name="q12" value="C"> C) math.h</li>
+                <li><input type="radio" name="q12" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. What is the size of a double in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="A"> A) 4 bytes</li>
+                <li><input type="radio" name="q13" value="B"> B) 8 bytes</li>
+                <li><input type="radio" name="q13" value="C"> C) 16 bytes</li>
+                <li><input type="radio" name="q13" value="D"> D) 2 bytes</li>
+            </ul>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. Which function is used to allocate memory dynamically in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="A"> A) calloc()</li>
+                <li><input type="radio" name="q14" value="B"> B) malloc()</li>
+                <li><input type="radio" name="q14" value="C"> C) realloc()</li>
+                <li><input type="radio" name="q14" value="D"> D) free()</li>
+            </ul>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. What is the output of the expression `5 + 3 * 2` in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="A"> A) 11</li>
+                <li><input type="radio" name="q15" value="B"> B) 16</li>
+                <li><input type="radio" name="q15" value="C"> C) 13</li>
+                <li><input type="radio" name="q15" value="D"> D) 10</li>
+            </ul>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. Which of these is a valid C variable name?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="A"> A) 2var</li>
+                <li><input type="radio" name="q16" value="B"> B) var@123</li>
+                <li><input type="radio" name="q16" value="C"> C) var_123</li>
+                <li><input type="radio" name="q16" value="D"> D) $var</li>
+            </ul>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <p>17. What is the correct syntax to comment a single line in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="A"> A) // Comment</li>
+                <li><input type="radio" name="q17" value="B"> B) <!-- Comment --> </li>
+                <li><input type="radio" name="q17" value="C"> C) /* Comment */</li>
+                <li><input type="radio" name="q17" value="D"> D) # Comment </li>
+            </ul>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. What is the purpose of the `break` statement in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="A"> A) To break a loop</li>
+                <li><input type="radio" name="q18" value="B"> B) To exit a switch case</li>
+                <li><input type="radio" name="q18" value="C"> C) Both A and B</li>
+                <li><input type="radio" name="q18" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. Which operator is used for modulus in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="A"> A) %</li>
+                <li><input type="radio" name="q19" value="B"> B) /</li>
+                <li><input type="radio" name="q19" value="C"> C) *</li>
+                <li><input type="radio" name="q19" value="D"> D) +</li>
+            </ul>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. Which of these is used to get the size of a data type in C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="A"> A) sizeof()</li>
+                <li><input type="radio" name="q20" value="B"> B) lengthof()</li>
+                <li><input type="radio" name="q20" value="C"> C) sizeofof()</li>
+                <li><input type="radio" name="q20" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="calculateScore()">Submit</button>
+    </form>
+</div>
+
+<script>
+    var totalQuestions = 20;
+    var timeRemaining = 20 * 60; // 20 minutes in seconds
+    var timerElement = document.getElementById("timer");
+
+    function startTimer() {
+        setInterval(function() {
+            if (timeRemaining <= 0) {
+                alert("Time's up!");
+                calculateScore();
+                return;
+            }
+            timeRemaining--;
+            var minutes = Math.floor(timeRemaining / 60);
+            var seconds = timeRemaining % 60;
+            timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }, 1000);
+    }
+
+    function calculateScore() {
+        var score = 0;
+        var formElements = document.forms['quizForm'].elements;
+
+        if (formElements['q1'].value == "A") score++;
+        if (formElements['q2'].value == "B") score++;
+        if (formElements['q3'].value == "B") score++;
+        if (formElements['q4'].value == "B") score++;
+        if (formElements['q5'].value == "C") score++;
+        if (formElements['q6'].value == "A") score++;
+        if (formElements['q7'].value == "D") score++;
+        if (formElements['q8'].value == "A") score++;
+        if (formElements['q9'].value == "B") score++;
+        if (formElements['q10'].value == "B") score++;
+        if (formElements['q11'].value == "A") score++;
+        if (formElements['q12'].value == "A") score++;
+        if (formElements['q13'].value == "B") score++;
+        if (formElements['q14'].value == "B") score++;
+        if (formElements['q15'].value == "A") score++;
+        if (formElements['q16'].value == "C") score++;
+        if (formElements['q17'].value == "A") score++;
+        if (formElements['q18'].value == "C") score++;
+        if (formElements['q19'].value == "A") score++;
+        if (formElements['q20'].value == "A") score++;
+
+        alert("Your score " + score + " out of " + totalQuestions);
+    }
+
+    startTimer();
+</script>
+
+</body>
+</html>

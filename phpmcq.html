@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Language Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            width: 50%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>PHP Language Quiz</h1>
+    <div class="timer">
+        <p>Time Remaining: <span id="timer">10:00</span></p>
+    </div>
+    
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What does PHP stand for?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) Hypertext Preprocessor</li>
+                <li><input type="radio" name="q1" value="B"> B) Personal Home Page</li>
+                <li><input type="radio" name="q1" value="C"> C) Private Home Page</li>
+                <li><input type="radio" name="q1" value="D"> D) Predefined Hypertext Processor</li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which of the following is the correct way to include a PHP file?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) include("filename.php");</li>
+                <li><input type="radio" name="q2" value="B"> B) import("filename.php");</li>
+                <li><input type="radio" name="q2" value="C"> C) require("filename.php");</li>
+                <li><input type="radio" name="q2" value="D"> D) Both A and C</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. How do you add a comment in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) // comment</li>
+                <li><input type="radio" name="q3" value="B"> B) <!-- comment --> </li>
+                <li><input type="radio" name="q3" value="C"> C) /* comment */</li>
+                <li><input type="radio" name="q3" value="D"> D) All of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. What is the correct way to start a PHP block of code?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) <php></php></li>
+                <li><input type="radio" name="q4" value="B"> B) <?php ?> </li>
+                <li><input type="radio" name="q4" value="C"> C) <script></script></li>
+                <li><input type="radio" name="q4" value="D"> D) <start></start></li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. How can you retrieve data from a form in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) $_POST</li>
+                <li><input type="radio" name="q5" value="B"> B) $_GET</li>
+                <li><input type="radio" name="q5" value="C"> C) $_REQUEST</li>
+                <li><input type="radio" name="q5" value="D"> D) All of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. What is the correct way to declare a PHP variable?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) $var_name</li>
+                <li><input type="radio" name="q6" value="B"> B) var $name</li>
+                <li><input type="radio" name="q6" value="C"> C) variable $name</li>
+                <li><input type="radio" name="q6" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. Which of the following is used to connect to a MySQL database in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) mysql_connect()</li>
+                <li><input type="radio" name="q7" value="B"> B) mysqli_connect()</li>
+                <li><input type="radio" name="q7" value="C"> C) db_connect()</li>
+                <li><input type="radio" name="q7" value="D"> D) Both A and B</li>
+            </ul>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. How can you define a constant in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) define("CONSTANT_NAME", "value");</li>
+                <li><input type="radio" name="q8" value="B"> B) const CONSTANT_NAME = "value";</li>
+                <li><input type="radio" name="q8" value="C"> C) constant("CONSTANT_NAME", "value");</li>
+                <li><input type="radio" name="q8" value="D"> D) Both A and B</li>
+            </ul>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. Which PHP function is used to count the number of elements in an array?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) count()</li>
+                <li><input type="radio" name="q9" value="B"> B) array_count()</li>
+                <li><input type="radio" name="q9" value="C"> C) size()</li>
+                <li><input type="radio" name="q9" value="D"> D) length()</li>
+            </ul>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. Which function is used to get the length of a string in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> A) strlen()</li>
+                <li><input type="radio" name="q10" value="B"> B) length()</li>
+                <li><input type="radio" name="q10" value="C"> C) size()</li>
+                <li><input type="radio" name="q10" value="D"> D) str_length()</li>
+            </ul>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. How do you concatenate strings in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="A"> A) . (dot)</li>
+                <li><input type="radio" name="q11" value="B"> B) + (plus)</li>
+                <li><input type="radio" name="q11" value="C"> C) , (comma)</li>
+                <li><input type="radio" name="q11" value="D"> D) & (ampersand)</li>
+            </ul>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. How do you declare an array in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="A"> A) $arr = array();</li>
+                <li><input type="radio" name="q12" value="B"> B) array arr[];</li>
+                <li><input type="radio" name="q12" value="C"> C) array arr = [];</li>
+                <li><input type="radio" name="q12" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. How do you define a class in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="A"> A) class ClassName { }</li>
+                <li><input type="radio" name="q13" value="B"> B) class ClassName[] { }</li>
+                <li><input type="radio" name="q13" value="C"> C) object ClassName { }</li>
+                <li><input type="radio" name="q13" value="D"> D) function ClassName { }</li>
+            </ul>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. How do you create a session in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="A"> A) session_start();</li>
+                <li><input type="radio" name="q14" value="B"> B) start_session();</li>
+                <li><input type="radio" name="q14" value="C"> C) session_create();</li>
+                <li><input type="radio" name="q14" value="D"> D) begin_session();</li>
+            </ul>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. How do you destroy a session in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="A"> A) session_destroy();</li>
+                <li><input type="radio" name="q15" value="B"> B) destroy_session();</li>
+                <li><input type="radio" name="q15" value="C"> C) clear_session();</li>
+                <li><input type="radio" name="q15" value="D"> D) end_session();</li>
+            </ul>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. Which function is used to check if a variable is an array?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="A"> A) is_array()</li>
+                <li><input type="radio" name="q16" value="B"> B) is_object()</li>
+                <li><input type="radio" name="q16" value="C"> C) is_array_variable()</li>
+                <li><input type="radio" name="q16" value="D"> D) is_arr()</li>
+            </ul>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <p>17. How do you remove an element from an array in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="A"> A) unset()</li>
+                <li><input type="radio" name="q17" value="B"> B) remove()</li>
+                <li><input type="radio" name="q17" value="C"> C) delete()</li>
+                <li><input type="radio" name="q17" value="D"> D) delete_array()</li>
+            </ul>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. How do you define a constant in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="A"> A) define("CONSTANT_NAME", "value");</li>
+                <li><input type="radio" name="q18" value="B"> B) const CONSTANT_NAME = "value";</li>
+                <li><input type="radio" name="q18" value="C"> C) constant("CONSTANT_NAME", "value");</li>
+                <li><input type="radio" name="q18" value="D"> D) Both A and B</li>
+            </ul>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. How do you retrieve form data in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="A"> A) $_POST</li>
+                <li><input type="radio" name="q19" value="B"> B) $_GET</li>
+                <li><input type="radio" name="q19" value="C"> C) $_REQUEST</li>
+                <li><input type="radio" name="q19" value="D"> D) All of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. How do you create a function in PHP?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="A"> A) function myFunction() { }</li>
+                <li><input type="radio" name="q20" value="B"> B) create function myFunction() { }</li>
+                <li><input type="radio" name="q20" value="C"> C) function create() { }</li>
+                <li><input type="radio" name="q20" value="D"> D) function() { }</li>
+            </ul>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result" style="display:none; text-align:center; margin-top:20px;"></div>
+</div>
+
+<script>
+    var totalTime = 10 * 60; // 10 minutes in seconds
+    var timerElement = document.getElementById('timer');
+    var quizForm = document.getElementById('quizForm');
+    var score = 0;
+    var totalQuestions = 20;
+
+    function startTimer() {
+        var timerInterval = setInterval(function() {
+            var minutes = Math.floor(totalTime / 60);
+            var seconds = totalTime % 60;
+
+            // Pad with zeroes if needed
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            timerElement.textContent = minutes + ":" + seconds;
+            totalTime--;
+
+            if (totalTime < 0) {
+                clearInterval(timerInterval);
+                submitQuiz();
+            }
+        }, 1000);
+    }
+
+    function submitQuiz() {
+        for (var i = 1; i <= totalQuestions; i++) {
+            var question = document.querySelector(`input[name="q${i}"]:checked`);
+            if (question && question.value === 'A') {
+                score++;
+            }
+        }
+
+        var result = document.getElementById('result');
+        result.style.display = "block";
+        result.innerHTML = `Your score is: ${score} / ${totalQuestions}`;
+    }
+
+    startTimer();
+</script>
+
+</body>
+</html>

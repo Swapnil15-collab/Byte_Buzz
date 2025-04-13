@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Language Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            width: 50%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Java Language Quiz</h1>
+    <div class="timer">
+        <p>Time Remaining: <span id="timer">10:00</span></p>
+    </div>
+    
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What is the correct syntax to print "Hello, World" in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) System.out.println("Hello, World");</li>
+                <li><input type="radio" name="q1" value="B"> B) echo "Hello, World";</li>
+                <li><input type="radio" name="q1" value="C"> C) printf("Hello, World");</li>
+                <li><input type="radio" name="q1" value="D"> D) print("Hello, World");</li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which of the following is the correct data type in Java for storing a whole number?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) int</li>
+                <li><input type="radio" name="q2" value="B"> B) float</li>
+                <li><input type="radio" name="q2" value="C"> C) double</li>
+                <li><input type="radio" name="q2" value="D"> D) char</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What is the correct syntax for a for loop in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) for(int i=0; i<10; i++)</li>
+                <li><input type="radio" name="q3" value="B"> B) for(i=0; i<10; i+=1)</li>
+                <li><input type="radio" name="q3" value="C"> C) for(i<10; i++)</li>
+                <li><input type="radio" name="q3" value="D"> D) for(i=0; i<=10;)</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. What is the default return type of the main function in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) void</li>
+                <li><input type="radio" name="q4" value="B"> B) int</li>
+                <li><input type="radio" name="q4" value="C"> C) String</li>
+                <li><input type="radio" name="q4" value="D"> D) float</li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. What is the purpose of the `import` statement in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) To include external classes or packages</li>
+                <li><input type="radio" name="q5" value="B"> B) To define variables</li>
+                <li><input type="radio" name="q5" value="C"> C) To specify the output of a function</li>
+                <li><input type="radio" name="q5" value="D"> D) To declare constants</li>
+            </ul>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. What is the size of an int in Java (on most systems)?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) 4 bytes</li>
+                <li><input type="radio" name="q6" value="B"> B) 8 bytes</li>
+                <li><input type="radio" name="q6" value="C"> C) 16 bytes</li>
+                <li><input type="radio" name="q6" value="D"> D) 2 bytes</li>
+            </ul>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What is the main difference between Java and C?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) Java is platform-independent; C is platform-dependent</li>
+                <li><input type="radio" name="q7" value="B"> B) Java does not support object-oriented programming</li>
+                <li><input type="radio" name="q7" value="C"> C) Java is faster than C</li>
+                <li><input type="radio" name="q7" value="D"> D) C does not support multi-threading</li>
+            </ul>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. Which operator is used to access a member of a class in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) . (dot)</li>
+                <li><input type="radio" name="q8" value="B"> B) -> (arrow)</li>
+                <li><input type="radio" name="q8" value="C"> C) & (ampersand)</li>
+                <li><input type="radio" name="q8" value="D"> D) % (percent)</li>
+            </ul>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. What is the result of the expression `3 + 4 * 2` in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) 14</li>
+                <li><input type="radio" name="q9" value="B"> B) 11</li>
+                <li><input type="radio" name="q9" value="C"> C) 7</li>
+                <li><input type="radio" name="q9" value="D"> D) 10</li>
+            </ul>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. Which method is used to find the length of a string in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> A) length()</li>
+                <li><input type="radio" name="q10" value="B"> B) size()</li>
+                <li><input type="radio" name="q10" value="C"> C) strlen()</li>
+                <li><input type="radio" name="q10" value="D"> D) strlength()</li>
+            </ul>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. What is the result of `++x` in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="A"> A) Pre-increment the value of x</li>
+                <li><input type="radio" name="q11" value="B"> B) Post-increment the value of x</li>
+                <li><input type="radio" name="q11" value="C"> C) Decreases the value of x</li>
+                <li><input type="radio" name="q11" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. How do you declare a function prototype in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="A"> A) void func(int);</li>
+                <li><input type="radio" name="q12" value="B"> B) func(void);</li>
+                <li><input type="radio" name="q12" value="C"> C) function(int);</li>
+                <li><input type="radio" name="q12" value="D"> D) void function(int);</li>
+            </ul>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. Which is the correct way to create a constructor in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="A"> A) ClassName();</li>
+                <li><input type="radio" name="q13" value="B"> B) ClassName{};</li>
+                <li><input type="radio" name="q13" value="C"> C) void ClassName();</li>
+                <li><input type="radio" name="q13" value="D"> D) constructor ClassName();</li>
+            </ul>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. How do you create a class in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="A"> A) class ClassName { };</li>
+                <li><input type="radio" name="q14" value="B"> B) Class ClassName { };</li>
+                <li><input type="radio" name="q14" value="C"> C) class ClassName();</li>
+                <li><input type="radio" name="q14" value="D"> D) ClassName class { };</li>
+            </ul>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. Which access modifier allows access to a variable or method from any class in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="A"> A) public</li>
+                <li><input type="radio" name="q15" value="B"> B) private</li>
+                <li><input type="radio" name="q15" value="C"> C) protected</li>
+                <li><input type="radio" name="q15" value="D"> D) default</li>
+            </ul>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. Which keyword is used to declare a constant variable in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="A"> A) const</li>
+                <li><input type="radio" name="q16" value="B"> B) static</li>
+                <li><input type="radio" name="q16" value="C"> C) final</li>
+                <li><input type="radio" name="q16" value="D"> D) constant</li>
+            </ul>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <p>17. How do you declare an array in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="A"> A) int[] arr;</li>
+                <li><input type="radio" name="q17" value="B"> B) int arr[];</li>
+                <li><input type="radio" name="q17" value="C"> C) array arr[];</li>
+                <li><input type="radio" name="q17" value="D"> D) int[5] arr;</li>
+            </ul>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. Which of the following is used to handle exceptions in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="A"> A) try-catch</li>
+                <li><input type="radio" name="q18" value="B"> B) try-finally</li>
+                <li><input type="radio" name="q18" value="C"> C) catch-finally</li>
+                <li><input type="radio" name="q18" value="D"> D) throw-catch</li>
+            </ul>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. Which method is used to remove a substring in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="A"> A) remove()</li>
+                <li><input type="radio" name="q19" value="B"> B) delete()</li>
+                <li><input type="radio" name="q19" value="C"> C) substring()</li>
+                <li><input type="radio" name="q19" value="D"> D) replace()</li>
+            </ul>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. Which operator is used to compare two objects in Java?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="A"> A) ==</li>
+                <li><input type="radio" name="q20" value="B"> B) equals()</li>
+                <li><input type="radio" name="q20" value="C"> C) compare()</li>
+                <li><input type="radio" name="q20" value="D"> D) objectCompare()</li>
+            </ul>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result" style="display:none; text-align:center; margin-top:20px;"></div>
+</div>
+
+<script>
+    var totalTime = 10 * 60; // 10 minutes in seconds
+    var timerElement = document.getElementById('timer');
+    var quizForm = document.getElementById('quizForm');
+    var score = 0;
+    var totalQuestions = 20;
+
+    function startTimer() {
+        var timerInterval = setInterval(function() {
+            var minutes = Math.floor(totalTime / 60);
+            var seconds = totalTime % 60;
+
+            // Pad with zeroes if needed
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            timerElement.textContent = minutes + ":" + seconds;
+            totalTime--;
+
+            if (totalTime < 0) {
+                clearInterval(timerInterval);
+                submitQuiz();
+            }
+        }, 1000);
+    }
+
+    function submitQuiz() {
+        for (var i = 1; i <= totalQuestions; i++) {
+            var question = document.querySelector(`input[name="q${i}"]:checked`);
+            if (question && question.value === 'A') {
+                score++;
+            }
+        }
+
+        var result = document.getElementById('result');
+        result.style.display = "block";
+        result.innerHTML = `Your score is: ${score} / ${totalQuestions}`;
+    }
+
+    startTimer();
+</script>
+
+</body>
+</html>

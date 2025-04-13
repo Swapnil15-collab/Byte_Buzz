@@ -1,0 +1,74 @@
+/* General Container for Left and Right Parts */
+.container.main-content {
+    display: flex;              /* Aligns children horizontally */
+    justify-content: space-between; /* Adds space between left and right parts */
+    align-items: flex-start;    /* Aligns items to the top */
+    padding: 20px;
+}
+
+/* Left Part */
+.left-part {
+    width: 30%;                 /* Left part takes up 30% of the container */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.left-part .topics ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-part .topics ul li {
+    margin-bottom: 10px;
+}
+
+.left-part .topics ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.left-part .topics ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Right Part */
+.right-part {
+    width: 65%;                /* Right part takes up 65% of the container */
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.right-part .interview-btn {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.right-part .interview-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Footer Styles (for your footer section) */
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.footer__container div {
+    width: 23%;
+}
+
+.footer__socials li {
+    display: inline;
+    margin-right: 10px;
+}

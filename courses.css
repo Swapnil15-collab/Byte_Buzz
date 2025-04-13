@@ -1,0 +1,332 @@
+.teams {
+    background:var(--color-bg1);
+    box-shadow: inset 0 0 3rem black;
+    
+    margin-top: 8rem;
+    border-radius: 5%;
+}
+.team__containers {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 2rem;
+
+    border-radius: 5%;
+
+}
+
+.team__members {
+    background:var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+/*transition: var(--transition);*/
+transition: box-shadow 0.3s ease-in-out;
+position: relative;
+overflow: hidden;
+border-radius: 5%;
+height: 500px;
+width: 300px;
+}
+.team__members:hover {
+    background:transparent;
+    background-color: var(--color-bg1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.course__info a {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+.team__member-infos {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   gap: 10px;
+   margin-bottom: 20px;
+   margin-top: 5px;
+}
+
+.team__member-infos a{
+   
+   margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.team__member-images {
+    margin-bottom: 1rem; /* Adjusts the space below the image 
+}
+
+.team__member-infos h4 {
+    margin: 5px 0; /* Adds space above and below the heading 
+}
+
+.team__member-infos a {
+    margin-top: 10px; /* Adds space above the "Learn more" button 
+    padding: 0.8rem 1.5rem; /* Ensures button padding for better appearance 
+    background: var(--color-success);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/**new**/
+
+.team__member-images img:hover {
+    transform: scale(1.2); /* Pop-up effect */
+    filter: brightness(1.1); /* Slightly brighten the image */
+}
+
+
+
+
+
+
+/* Cool and Animated CSS for Buttons 
+.cbutton {
+    display: inline-block;
+   /* background-color: var(--color-white);*/
+    /*color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 3px solid black;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    border-radius: 20%;
+    margin-top: 20px;
+}
+
+.cbutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+   background-color: var(--color-danger);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+
+.cbutton:hover::before {
+    left: 0;
+}
+
+.cbutton:hover {
+    color: var(--color-white);
+    border-color: var(--color-danger);
+    transform: scale(1.05);
+}
+
+
+
+
+
+*/
+/* Container for positioning buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between the buttons */
+    align-items: center; /* Vertically center the buttons */
+    width: 100%; /* Full width to allow space for positioning */
+    padding: 30px; /* Increase padding for more space around the container */
+    gap: 10px; /* 10px gap between the buttons */
+}
+
+/* Improved CSS for Cool and Animated Links (Styled as Buttons) */
+.cbutton {
+    display: flex; /* Use flexbox to align text */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    padding: 2px 2px; /* Reduced height with smaller padding */
+    border: 3px solid #4A90E2; /* Blue border */
+    font-weight: 600;
+    font-size: 1rem; /* Slightly increased font size */
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #87CEEB; /* Sky blue background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline for links */
+    text-align: center; /* Center the text */
+}
+
+.cbutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #4A90E2; /* Blue background on hover */
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+    border-radius: 5px; /* Match the button corners */
+}
+
+.cbutton:hover::before {
+    left: 0;
+}
+
+.cbutton:hover {
+    color: white; /* Keep white text on hover */
+    border-color: #4A90E2; /* Blue border on hover */
+    background-color: #5B9BD5; /* Darker sky blue background on hover */
+    transform: scale(1.1); /* Slight size increase on hover */
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+    .cbutton {
+        padding: 0.6rem 1.5rem; /* Reduced padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image Styling */
+.team__member-images {
+    margin-bottom: 1rem; /* Spacing below the image */
+    overflow: hidden;
+   /* border-radius: 50%; /* Makes the image circular */
+}
+
+.team__member-images img {
+    width: 100%; /* Ensures the image fits the container */
+    height: auto;
+    object-fit: cover; /* Ensures proper cropping */
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                filter 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth pop-up effect */
+}
+
+.team__member-images img:hover {
+    transform: scale(1.2); /* Pop-up effect */
+    filter: brightness(1.1); /* Brightens the image slightly */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 2px; /* Space between input and button */
+}
+
+.search-bar input {
+    width: 150px; /* Adjust width as needed */
+    padding: 8px 12px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline:#4A90E2;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #007bff; /* Highlighted border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+}
+
+/* Styling for the Search Button */
+.search-bar button {
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Icon inside the Button */
+.search-bar button i {
+    font-size: 18px; /* Adjust icon size */
+}
+
+
+
+
+
+#no-results {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Language Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            width: 50%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>JavaScript Language Quiz</h1>
+    <div class="timer">
+        <p>Time Remaining: <span id="timer">10:00</span></p>
+    </div>
+    
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. Which of the following is the correct syntax to create a variable in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) var x;</li>
+                <li><input type="radio" name="q1" value="B"> B) let x;</li>
+                <li><input type="radio" name="q1" value="C"> C) const x;</li>
+                <li><input type="radio" name="q1" value="D"> D) All of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which method is used to write text to the console in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) print()</li>
+                <li><input type="radio" name="q2" value="B"> B) log()</li>
+                <li><input type="radio" name="q2" value="C"> C) console.write()</li>
+                <li><input type="radio" name="q2" value="D"> D) console.log()</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What does the '===' operator do in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) Assigns value to a variable</li>
+                <li><input type="radio" name="q3" value="B"> B) Checks both value and type equality</li>
+                <li><input type="radio" name="q3" value="C"> C) Checks only value equality</li>
+                <li><input type="radio" name="q3" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. How do you create a function in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) function myFunction()</li>
+                <li><input type="radio" name="q4" value="B"> B) function:myFunction()</li>
+                <li><input type="radio" name="q4" value="C"> C) function = myFunction()</li>
+                <li><input type="radio" name="q4" value="D"> D) function -> myFunction()</li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. Which of the following is used to declare a constant in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) var</li>
+                <li><input type="radio" name="q5" value="B"> B) let</li>
+                <li><input type="radio" name="q5" value="C"> C) const</li>
+                <li><input type="radio" name="q5" value="D"> D) constant</li>
+            </ul>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. How can you add a comment in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) // This is a comment</li>
+                <li><input type="radio" name="q6" value="B"> B) <!-- This is a comment --> </li>
+                <li><input type="radio" name="q6" value="C"> C) /* This is a comment */</li>
+                <li><input type="radio" name="q6" value="D"> D) Both A and C</li>
+            </ul>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What will the following code snippet print: `console.log(2 + '2')`?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) 4</li>
+                <li><input type="radio" name="q7" value="B"> B) 22</li>
+                <li><input type="radio" name="q7" value="C"> C) NaN</li>
+                <li><input type="radio" name="q7" value="D"> D) Error</li>
+            </ul>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. Which of the following is not a primitive data type in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) String</li>
+                <li><input type="radio" name="q8" value="B"> B) Number</li>
+                <li><input type="radio" name="q8" value="C"> C) Boolean</li>
+                <li><input type="radio" name="q8" value="D"> D) Object</li>
+            </ul>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. How do you create a new array in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) var arr = [];</li>
+                <li><input type="radio" name="q9" value="B"> B) var arr = new Array();</li>
+                <li><input type="radio" name="q9" value="C"> C) var arr = Array();</li>
+                <li><input type="radio" name="q9" value="D"> D) All of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. What is the purpose of the `JSON.stringify()` method in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> A) Converts a JavaScript object to a JSON string</li>
+                <li><input type="radio" name="q10" value="B"> B) Converts a JSON string to a JavaScript object</li>
+                <li><input type="radio" name="q10" value="C"> C) Sends a JSON string to the server</li>
+                <li><input type="radio" name="q10" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. How can you access the length of an array in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="A"> A) arr.length</li>
+                <li><input type="radio" name="q11" value="B"> B) arr.size</li>
+                <li><input type="radio" name="q11" value="C"> C) arr.count</li>
+                <li><input type="radio" name="q11" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. Which of the following is used to define a promise in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="A"> A) new Promise()</li>
+                <li><input type="radio" name="q12" value="B"> B) new Async()</li>
+                <li><input type="radio" name="q12" value="C"> C) new Await()</li>
+                <li><input type="radio" name="q12" value="D"> D) new Task()</li>
+            </ul>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. What does the `setInterval()` method do in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="A"> A) Repeats a function at a specified interval</li>
+                <li><input type="radio" name="q13" value="B"> B) Sets a delay for the execution of a function</li>
+                <li><input type="radio" name="q13" value="C"> C) Executes a function once after a delay</li>
+                <li><input type="radio" name="q13" value="D"> D) Stops a function after a specified time</li>
+            </ul>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. How do you add an event listener to an element in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="A"> A) element.addEventListener('event', function)</li>
+                <li><input type="radio" name="q14" value="B"> B) element.on('event', function)</li>
+                <li><input type="radio" name="q14" value="C"> C) element.addEvent('event', function)</li>
+                <li><input type="radio" name="q14" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. Which of the following is used to convert a string to a number in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="A"> A) parseInt()</li>
+                <li><input type="radio" name="q15" value="B"> B) Number()</li>
+                <li><input type="radio" name="q15" value="C"> C) Both A and B</li>
+                <li><input type="radio" name="q15" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. What is the result of `typeof 'Hello'` in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="A"> A) string</li>
+                <li><input type="radio" name="q16" value="B"> B) object</li>
+                <li><input type="radio" name="q16" value="C"> C) undefined</li>
+                <li><input type="radio" name="q16" value="D"> D) null</li>
+            </ul>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <p>17. How do you select an HTML element by its ID in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="A"> A) document.querySelector('#id')</li>
+                <li><input type="radio" name="q17" value="B"> B) document.getElementById('id')</li>
+                <li><input type="radio" name="q17" value="C"> C) Both A and B</li>
+                <li><input type="radio" name="q17" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. Which of the following is the correct way to define a regular expression in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="A"> A) /abc/</li>
+                <li><input type="radio" name="q18" value="B"> B) new RegExp('abc')</li>
+                <li><input type="radio" name="q18" value="C"> C) Both A and B</li>
+                <li><input type="radio" name="q18" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. Which method is used to remove the last element from an array in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="A"> A) pop()</li>
+                <li><input type="radio" name="q19" value="B"> B) remove()</li>
+                <li><input type="radio" name="q19" value="C"> C) shift()</li>
+                <li><input type="radio" name="q19" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. What does the `parseFloat()` method do in JavaScript?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="A"> A) Converts a string to a float</li>
+                <li><input type="radio" name="q20" value="B"> B) Converts a float to a string</li>
+                <li><input type="radio" name="q20" value="C"> C) Converts a string to an integer</li>
+                <li><input type="radio" name="q20" value="D"> D) None of the above</li>
+            </ul>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

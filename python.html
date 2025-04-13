@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            list-style: none;
+            padding: 0;
+        }
+        .answers li {
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Python Quiz</h1>
+        <div id="quiz">
+            <!-- Quiz content will be dynamically added here -->
+        </div>
+        <button id="submit">Submit Quiz</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const quizData = [
+            { question: "Who developed Python?", options: ["Dennis Ritchie", "Guido van Rossum", "James Gosling", "Bjarne Stroustrup"], answer: 1 },
+            { question: "What is the file extension for Python files?", options: [".py", ".python", ".pyt", ".p"], answer: 0 },
+            { question: "What keyword is used to define a function in Python?", options: ["function", "def", "func", "lambda"], answer: 1 },
+            { question: "Which of the following is a mutable data type in Python?", options: ["String", "Tuple", "List", "Integer"], answer: 2 },
+            { question: "What does the len() function do?", options: ["Returns the length of a string", "Returns the length of a list", "Returns the length of a tuple", "All of the above"], answer: 3 },
+            { question: "How do you insert comments in Python code?", options: ["// comment", "# comment", "/* comment */", "<!-- comment -->"], answer: 1 },
+            { question: "Which operator is used for exponentiation in Python?", options: ["^", "**", "*", "//"], answer: 1 },
+            { question: "Which method is used to add an element to a list?", options: ["append()", "add()", "insert()", "push()"], answer: 0 },
+            { question: "How do you start a block of code in Python?", options: ["With curly braces", "With square brackets", "With indentation", "With a colon"], answer: 2 },
+            { question: "What is the output of 3/2 in Python 3?", options: ["1", "1.5", "2", "Error"], answer: 1 },
+            { question: "What is the purpose of the 'self' parameter in Python classes?", options: ["To refer to the current instance", "To create a new instance", "To destroy an instance", "None of the above"], answer: 0 },
+            { question: "Which module in Python is used to work with JSON data?", options: ["json", "os", "re", "sys"], answer: 0 },
+            { question: "Which of the following is not a keyword in Python?", options: ["pass", "eval", "assert", "nonlocal"], answer: 1 },
+            { question: "What is the output of type(5)?", options: ["int", "integer", "type 'int'", "Error"], answer: 2 },
+            { question: "Which method is used to remove an item from a list?", options: ["remove()", "delete()", "pop()", "Both A and C"], answer: 3 },
+            { question: "What is the output of 'hello'.upper()?", options: ["HELLO", "hello", "Hello", "Error"], answer: 0 },
+            { question: "Which loop is used when the number of iterations is not known in advance?", options: ["for", "while", "do-while", "None"], answer: 1 },
+            { question: "What is the purpose of the 'with' statement in Python?", options: ["To define a function", "To handle file operations", "To declare variables", "To create loops"], answer: 1 },
+            { question: "How do you create a dictionary in Python?", options: ["With curly braces", "With square brackets", "With parentheses", "With angle brackets"], answer: 0 },
+            { question: "Which function is used to get the length of an object in Python?", options: ["size()", "len()", "length()", "None"], answer: 1 }
+        ];
+
+        const quizContainer = document.getElementById("quiz");
+        const submitButton = document.getElementById("submit");
+        const resultContainer = document.getElementById("result");
+
+        function loadQuiz() {
+            quizContainer.innerHTML = quizData.map((q, index) => {
+                return `
+                    <div class="question">
+                        <h3>Q${index + 1}: ${q.question}</h3>
+                        <ul class="answers">
+                            ${q.options.map((option, i) => `
+                                <li>
+                                    <label>
+                                        <input type="radio" name="question${index}" value="${i}"> ${option}
+                                    </label>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function calculateScore() {
+            let score = 0;
+            quizData.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name=question${index}]:checked`);
+                if (selectedOption && parseInt(selectedOption.value) === q.answer) {
+                    score++;
+                }
+            });
+            return score;
+        }
+
+        submitButton.addEventListener("click", () => {
+            const score = calculateScore();
+            resultContainer.textContent = `You scored ${score} out of ${quizData.length}!`;
+        });
+
+        loadQuiz();
+    </script>
+</body>
+</html>

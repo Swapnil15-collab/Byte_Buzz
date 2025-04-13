@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Language Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            width: 50%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>CSS Language Quiz</h1>
+    <div class="timer">
+        <p>Time Remaining: <span id="timer">10:00</span></p>
+    </div>
+    
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What does CSS stand for?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) Cascading Style Sheets</li>
+                <li><input type="radio" name="q1" value="B"> B) Computer Style Sheets</li>
+                <li><input type="radio" name="q1" value="C"> C) Creative Style Sheets</li>
+                <li><input type="radio" name="q1" value="D"> D) Cascading Simple Sheets</li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which property is used to change the background color in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) color</li>
+                <li><input type="radio" name="q2" value="B"> B) background-color</li>
+                <li><input type="radio" name="q2" value="C"> C) bg-color</li>
+                <li><input type="radio" name="q2" value="D"> D) background</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. Which property is used to set the font size in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) font-size</li>
+                <li><input type="radio" name="q3" value="B"> B) text-size</li>
+                <li><input type="radio" name="q3" value="C"> C) size-font</li>
+                <li><input type="radio" name="q3" value="D"> D) text-font</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Which property is used to change the font of text in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) font-family</li>
+                <li><input type="radio" name="q4" value="B"> B) text-family</li>
+                <li><input type="radio" name="q4" value="C"> C) font-type</li>
+                <li><input type="radio" name="q4" value="D"> D) font-style</li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. How do you add a comment in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) /* This is a comment */</li>
+                <li><input type="radio" name="q5" value="B"> B) // This is a comment</li>
+                <li><input type="radio" name="q5" value="C"> C) <!-- This is a comment --> </li>
+                <li><input type="radio" name="q5" value="D"> D) # This is a comment</li>
+            </ul>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. What is the default value of the `position` property in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) relative</li>
+                <li><input type="radio" name="q6" value="B"> B) absolute</li>
+                <li><input type="radio" name="q6" value="C"> C) static</li>
+                <li><input type="radio" name="q6" value="D"> D) fixed</li>
+            </ul>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. How do you select an element with the ID "header" in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) #header</li>
+                <li><input type="radio" name="q7" value="B"> B) .header</li>
+                <li><input type="radio" name="q7" value="C"> C) header</li>
+                <li><input type="radio" name="q7" value="D"> D) *header</li>
+            </ul>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. What is the purpose of the `z-index` property in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) It defines the stacking order of elements</li>
+                <li><input type="radio" name="q8" value="B"> B) It defines the size of elements</li>
+                <li><input type="radio" name="q8" value="C"> C) It defines the position of elements</li>
+                <li><input type="radio" name="q8" value="D"> D) It defines the color of elements</li>
+            </ul>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. How do you make a text bold in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) font-weight: bold</li>
+                <li><input type="radio" name="q9" value="B"> B) font-style: bold</li>
+                <li><input type="radio" name="q9" value="C"> C) font: bold</li>
+                <li><input type="radio" name="q9" value="D"> D) text-weight: bold</li>
+            </ul>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. Which property is used to change the space between lines in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> A) line-height</li>
+                <li><input type="radio" name="q10" value="B"> B) letter-spacing</li>
+                <li><input type="radio" name="q10" value="C"> C) word-spacing</li>
+                <li><input type="radio" name="q10" value="D"> D) margin</li>
+            </ul>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. Which property is used to add space around elements in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="A"> A) padding</li>
+                <li><input type="radio" name="q11" value="B"> B) margin</li>
+                <li><input type="radio" name="q11" value="C"> C) border</li>
+                <li><input type="radio" name="q11" value="D"> D) space</li>
+            </ul>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. What is the default value of the `display` property in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="A"> A) block</li>
+                <li><input type="radio" name="q12" value="B"> B) inline</li>
+                <li><input type="radio" name="q12" value="C"> C) none</li>
+                <li><input type="radio" name="q12" value="D"> D) flex</li>
+            </ul>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. How do you create a class selector in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="A"> A) .classname</li>
+                <li><input type="radio" name="q13" value="B"> B) #classname</li>
+                <li><input type="radio" name="q13" value="C"> C) *classname</li>
+                <li><input type="radio" name="q13" value="D"> D) classname</li>
+            </ul>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. Which property is used to change the text color in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="A"> A) text-color</li>
+                <li><input type="radio" name="q14" value="B"> B) color</li>
+                <li><input type="radio" name="q14" value="C"> C) font-color</li>
+                <li><input type="radio" name="q14" value="D"> D) text-style</li>
+            </ul>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. How do you set the width of an element in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="A"> A) width</li>
+                <li><input type="radio" name="q15" value="B"> B) height</li>
+                <li><input type="radio" name="q15" value="C"> C) size</li>
+                <li><input type="radio" name="q15" value="D"> D) margin</li>
+            </ul>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. What does the `opacity` property in CSS do?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="A"> A) Makes an element semi-transparent</li>
+                <li><input type="radio" name="q16" value="B"> B) Changes the visibility of an element</li>
+                <li><input type="radio" name="q16" value="C"> C) Adds a blur effect to the element</li>
+                <li><input type="radio" name="q16" value="D"> D) Hides the element completely</li>
+            </ul>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <p>17. Which property is used to control the spacing between letters in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="A"> A) letter-spacing</li>
+                <li><input type="radio" name="q17" value="B"> B) word-spacing</li>
+                <li><input type="radio" name="q17" value="C"> C) text-spacing</li>
+                <li><input type="radio" name="q17" value="D"> D) margin</li>
+            </ul>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. What does the `box-sizing` property do in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="A"> A) Defines how the width and height of an element are calculated</li>
+                <li><input type="radio" name="q18" value="B"> B) Adds padding to the box</li>
+                <li><input type="radio" name="q18" value="C"> C) Sets the position of an element</li>
+                <li><input type="radio" name="q18" value="D"> D) Changes the border style</li>
+            </ul>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. Which property is used to add shadows to text in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="A"> A) text-shadow</li>
+                <li><input type="radio" name="q19" value="B"> B) box-shadow</li>
+                <li><input type="radio" name="q19" value="C"> C) shadow</li>
+                <li><input type="radio" name="q19" value="D"> D) font-shadow</li>
+            </ul>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. How do you display a list of items horizontally in CSS?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="A"> A) display: inline</li>
+                <li><input type="radio" name="q20" value="B"> B) display: block</li>
+                <li><input type="radio" name="q20" value="C"> C) display: flex</li>
+                <li><input type="radio" name="q20" value="D"> D) display: grid</li>
+            </ul>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" class="submit-btn" onclick="calculateScore()">Submit Quiz</button>
+    </form>
+</div>
+
+<script>
+    let timer = 600; // Timer for 10 minutes in seconds
+    let countdown;
+
+    function startTimer() {
+        countdown = setInterval(function() {
+            let minutes = Math.floor(timer / 60);
+            let seconds = timer % 60;
+
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            document.getElementById("timer").textContent = minutes + ":" + seconds;
+
+            if (timer <= 0) {
+                clearInterval(countdown);
+                alert("Time's up! Submitting your quiz.");
+                calculateScore();
+            } else {
+                timer--;
+            }
+        }, 1000);
+    }
+
+    function calculateScore() {
+        let score = 0;
+        const form = document.getElementById("quizForm");
+        const questions = form.querySelectorAll('.question');
+        
+        questions.forEach((question, index) => {
+            const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+            const correctAnswer = question.querySelector('input[value="A"]');
+            if (selectedAnswer && selectedAnswer.value === correctAnswer.value) {
+                score++;
+            }
+        });
+
+        alert("Your score is: " + score + " out of 20");
+    }
+
+    startTimer();
+</script>
+
+</body>
+</html>
