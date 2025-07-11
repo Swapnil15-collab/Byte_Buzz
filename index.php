@@ -54,7 +54,7 @@
         <div class="header__left">
 <h1>Learn, Grow, and Thrive in the World of Computer Science</h1>
 <p>Explore our extensive repository of computer science notes, tutorials, and study resources, carefully curated to facilitate your learning journey and help you thrive in the field.</p>
-<a href="courses.html" class="get-started-btn">Get Started</a>
+<a href="courses.php" class="get-started-btn">Get Started</a>
         </div>
         <div class="header__right">
         <div class="header__right-image">
