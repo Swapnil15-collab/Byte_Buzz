@@ -1,13 +1,15 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
+
+
+
+<?php
 include 'config.php';
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Debugging: Print form values
-    //echo "<pre>";
-   // print_r($_POST);
-   // echo "</pre>";
-    //exit();
 
     // Check if form fields exist
     if (!isset($_POST['username']) || !isset($_POST['email']) || !isset($_POST['password'])) {
@@ -47,9 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2 style='color: green;'>🎉 Registration Successful!</h2>
                 <p>You can now <a href='splogin.html' style='color: blue; text-decoration: underline;'>Login here</a>.</p>
               </div>";
-        exit(); // Stop script execution after showing message
-    }
-    
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -57,5 +56,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $stmt_check->close();
     $conn->close();
-
+}
 ?>
