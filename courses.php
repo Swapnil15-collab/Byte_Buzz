@@ -123,7 +123,7 @@ if (!isset($_SESSION['user_id'])) {
             </div>
             <div class="team__member-infos">
                 <h4>C++</h4>
-                <a href="c++.html" class="cbutton">Learn more</a>
+                <a href="newcpp.php" class="cbutton">Learn more</a>
                 <a href="newcppmcq.html" class="cbutton">Mcq test</a>
             </div>
 
